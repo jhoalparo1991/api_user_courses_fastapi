@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from api import users, sections, courses
 
-app = FastAPI()
+app = FastAPI( 
+              title="API USERS COURSES",
+              summary='Api desarrollada en el curso de desarrollo de apis con fastapi' )
 
 app.include_router(users.router)
 app.include_router(sections.router)
