@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(tags=["Courses"])
 
 @router.get('/courses',)
 async def read_courses():
@@ -14,11 +14,11 @@ async def create_course_api():
 @router.get('/courses/{id}',)
 async def read_course():
     return {'courses' : []}
-
+    
 @router.patch('/courses/{id}',)
 async def update_course():
     return {'courses' : []}
 
-@router.patch('/courses/{id}',)
+@router.delete('/courses/{id}',)
 async def delete_course():
     return {'courses' : []}

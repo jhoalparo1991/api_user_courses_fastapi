@@ -2,7 +2,7 @@ from typing import List, Optional
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-router = APIRouter()
+router = APIRouter(tags=["Users"])
 
 class User(BaseModel):
     username : str

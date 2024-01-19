@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(tags=["Sections"])
 
 @router.get('/sections/{id}')
 async def read_section():
